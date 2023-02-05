@@ -14,6 +14,6 @@ int main()
 		if (n > n0)
 			delta = fabs(sq[k] - sq[k ^ 1]) / 3.0;
 	}
-	printf("%lf %lf %d", sq[k]* sq[k], eps, n / 2);
+	printf("%lf %lf %d", sq[k]*sq[k], eps, n / 2);
 	return 0;
 }
