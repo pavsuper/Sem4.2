@@ -3,3 +3,4 @@
 #include <math.h>
 
 double rect(double a, double b, int n);
+double func(double x);

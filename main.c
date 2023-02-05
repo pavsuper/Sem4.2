@@ -2,23 +2,18 @@
 
 int main()
 {
-	int k, n;
-	double S1 = 0, S2 = 0, A, B, eps;
-	scanf("%lf %lf %d %lf", &A, &B, &n, &eps);
-	S2 = rect(A, B, n);
-	if (fabs(S2) < 1)
-		k = 1;
-	else
-		k = 2;
-	do
+	int k = 0, n = 0, n0 = 0;
+	double sq[2] = { 0 }, delta = 1, A, B, eps;
+	scanf("%lf %lf %d %lf", &A, &B, &n0, &eps);
+	n = n0;
+	for  (k = 0; delta > eps; n *= 2, k ^= 1)
 	{
-		S1 = S2;
-		n *= 2;
-		S2 = S2 = rect(A, B, n);
-	} while (	if (k == 1)
-					fabs(S2 - S1) > eps;
-				else
-					fabs((S2 - S1)/S2) > eps;
-			)
+		double h = (B - A) / n;
+		double s = rect(A, B, n);
+		sq[k] = s * h;
+		if (n > n0)
+			delta = fabs(sq[k] - sq[k ^ 1]) / 3.0;
+	}
+	printf("%lf %lf %d", sq[k]* sq[k], eps, n / 2);
 	return 0;
 }
