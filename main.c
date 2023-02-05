@@ -4,7 +4,7 @@ int main()
 {
 	int k = 0, n = 0, n0 = 0;
 	double sq[2] = { 0 }, delta = 1, A, B, eps;
-	scanf("%lf %lf %d %lf", &A, &B, &n0, &eps);
+	scanf_s("%lf %lf %d %lf", &A, &B, &n0, &eps);
 	n = n0;
 	for  (k = 0; delta > eps; n *= 2, k ^= 1)
 	{
