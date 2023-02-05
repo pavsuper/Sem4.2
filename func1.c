@@ -1,6 +1,5 @@
 #include "integral.h"
 
-
 double func(double x)
 {
 	double f;

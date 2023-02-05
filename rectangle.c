@@ -7,6 +7,6 @@ double rect(double a, double b, double n)
 	{
 		S+= func(x + h / 2);
 	}
-	S*= h;
+	S *= h;
 	return S;
 }

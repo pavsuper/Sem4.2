@@ -10,10 +10,10 @@ int main()
 	{
 		double h = (B - A) / n;
 		double s = rect(A, B, n);
-		sq[k] = s * h;
+		sq[k] = s;
 		if (n > n0)
 			delta = fabs(sq[k] - sq[k ^ 1]) / 3.0;
 	}
-	printf("%lf %lf %d", sq[k]*sq[k], eps, n / 2);
+	printf("%lf %lf %d", sq[k]* sq[k], delta, n / 2);
 	return 0;
 }
